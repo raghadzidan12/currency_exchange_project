@@ -1,0 +1,72 @@
+# The 'version' attribute is obsolete and can be removed.
+services:
+
+  # app:
+  #   container_name: nestjs
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   # ports:  # Not needed with host network; binds directly to host:3000
+  #     # - '3000:3000'
+  #   depends_on:
+  #     - mysql
+  #   restart: unless-stopped
+  #   env_file:
+  #     - .env
+  #   network_mode: host  # Uses host network for localhost access
+
+  # mysql:
+  #   container_name: mysql
+  #   image: mysql:8.0
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=Srafa123!
+  #     - MYSQL_DATABASE=srafa-db
+  #     - MYSQL_USER=admin
+  #     - MYSQL_PASSWORD=Srafa123!
+  #     - MYSQL_ALLOW_EMPTY_PASSWORD=no
+  #   ports:
+  #     - '3306:3306'  # Forwards to host localhost:3306
+  #   volumes:
+  #     - mysql-data:/var/lib/mysql
+  #   command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --skip-name-resolve --max_allowed_packet=128M --wait_timeout=28800 --default-authentication-plugin=mysql_native_password
+  #   restart: unless-stopped
+  #   networks:
+  #     - app-network
+
+
+  # phpmyadmin:
+  #   container_name: phpmyadmin
+  #   image: phpmyadmin:latest
+  #   ports:
+  #     - '8081:80'
+  #   env_file:
+  #     - .env
+  #   environment:
+  #     - PMA_HOST=mysql
+  #     - PMA_PORT=3306
+  #   depends_on:
+  #     - mysql
+  #   networks:
+  #     - app-network
+
+  mongodb:
+    container_name: mongodb
+    image: mongo:7.0
+    environment:
+      - MONGO_INITDB_DATABASE=srafa-db
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo-data:/data/db
+    command: --bind_ip_all
+    restart: unless-stopped
+    networks:
+      - app-network
+
+volumes:
+  # mysql-data:
+  mongo-data:
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,54 @@
+
+very important to read all this from under 'Overview'
+    - https://docs.nestjs.com/first-steps 
+
+- config file '.env'
+    - https://docs.nestjs.com/techniques/configuration
+
+
+- typeorm read the doc very well
+    - https://docs.nestjs.com/recipes/sql-typeorm
+
+
+- init structure of project
+    - https://docs.nestjs.com/first-steps
+
+
+
+- swagger for api doc
+    - https://docs.nestjs.com/openapi/introduction
+
+- auth with jwt
+    - https://docs.nestjs.com/security/authentication
+    - https://docs.nestjs.com/security/authorization
+
+- 
+
+
+/////// done ///////
+
+
+read in typeorm about relations between tables 
+https://typeorm.io/#/relations
+
+init other modules
+
+
+//// read me
+https://medium.com/@awaisshaikh94/a-detailed-guide-on-implementing-authentication-in-nestjs-4a347ce154b6
+
+
+
+/// docker compose
+https://docs.docker.com/compose/gettingstarted/
+
+
+docker compose up -d
+
+
+
+read about promises in js
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises
+
+
+read about passports : passport-local , passport-jwt, passport-oauth2, passport-google-oauth20, passport-facebook, passport-github, passport-twitter
