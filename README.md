@@ -1,6 +1,4 @@
 WORK TEAM:
-Rasha Nahtan &
-Khadija Al-homsh &
 Raghad Zidan &
 Tasneem Alito
 <p align="center">
